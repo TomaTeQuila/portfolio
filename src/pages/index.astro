@@ -1,0 +1,651 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Personal from '../components/Personal.astro';
+---
+
+<Layout>
+    <Personal />
+    
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-header">
+				<h2>Desarrollador Full Stack</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Frontend</h3>
+                    <p>Desarrollo interfaces modernas con Astro, Tailwind, CSS nativo, Next.js y las últimas tecnologías web para crear experiencias únicas.</p>
+                </div>
+                
+                
+                <div class="service-card">
+					<div class="service-icon">🤖</div>
+                    <h3>Backend</h3>
+                    <p>Desarrollador Backend con tecnologías modernas, robustas y escalables, tales como Laravel, Ruby on Rails, Express.js, y demás.</p>
+                </div>
+
+				<div class="service-card">
+					<div class="service-icon">🤝</div>
+					<h3>Teamwork</h3>
+					<p>El trabajo en equipo es fundamental, para ello, es importante tener buena comunicación y ser asertivo. Considero que tengo lo mencionado y buenas habilidades blandas.</p>
+				</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Skills Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="experience-content">
+                <div class="experience-left">                    
+                    <div class="job-timeline">
+                        <div class="job-item current">
+                            <div class="job-badge">Actual</div>
+                            <div class="job-content">
+                                <h3>Integration Analyst Jr.</h3>
+                                <p class="company">Buk • Santiago, Chile</p>
+                                <p class="period">Dic 2024 - Presente</p>
+                                <p class="description">Desarrollo de soluciones Ruby on Rails para archivos contables y vouchers personalizados. Migración de datos históricos y gestión de bases de datos externas con intenciones de integrarse a Buk.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="job-item">
+                            <div class="job-content">
+                                <h3>IT Support Internship</h3>
+                                <p class="company">FSM Ltda. • Viña del Mar</p>
+                                <p class="period">Ene 2024 - Abr 2024</p>
+                                <p class="description">Soporte técnico y optimización de procesos con IA. Uso de AutoCAD y sistemas ABB 800xA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-right">
+                    <div class="skills-section">
+                        <h3>Tecnologías</h3>
+                        <div class="tech-grid">
+                            <div class="tech-category">
+                                <h4>Backend</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag ruby">Ruby</span>
+                                    <span class="tech-tag python">Python</span>
+                                    <span class="tech-tag c">C#</span>
+                                    <span class="tech-tag java">Java</span>
+                                    <span class="tech-tag laravel">Laravel</span>
+									<span class="tech-tag express">Express.js</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Frontend</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag js">JavaScript</span>
+                                    <span class="tech-tag htmlcss">HTML/CSS</span>
+                                    <span class="tech-tag astro">Astro</span>
+                                    <span class="tech-tag next">Next.js</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>Bases de Datos</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag sql">SQL</span>
+                                    <span class="tech-tag">Git</span>
+                                    <span class="tech-tag">PHP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-section">
+                        <h3>Formación</h3>
+                        <div class="education-item">
+                            <h4>Ingeniería Civil Informática</h4>
+                            <p>UTFSM • En pausa por trabajo</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Técnico Superior en Informática</h4>
+                            <p>UTFSM • 2022-2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="languages-section">
+                        <h3>Idiomas</h3>
+                        <div class="language-bars">
+                            <div class="language-item">
+                                <span class="language-name">Español</span>
+                                <div class="language-bar">
+                                    <div class="language-fill native"></div>
+                                </div>
+                                <span class="language-level">Nativo</span>
+                            </div>
+							<div class="language-item">
+								<span class="language-name">Francés</span>
+								<div class="language-bar">
+									<div class="language-fill intermediate"></div>
+								</div>
+								<span class="language-level">Intermedio</span>
+							</div>
+                            <div class="language-item">
+                                <span class="language-name">Inglés</span>
+                                <div class="language-bar">
+                                    <div class="language-fill medianamente"></div>
+                                </div>
+                                <span class="language-level">Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-cta">
+                <h2>¿Listo para trabajar juntos?</h2>
+                <p>Siempre estoy abierto a nuevas oportunidades y proyectos interesantes</p>
+                <div class="contact-info">
+                    <a href="mailto:amaroeduard@gmail.com" class="contact-btn">
+                        <span class="contact-icon">📧</span>
+                        amaroeduard@gmail.com
+                    </a>
+                    <a href="tel:+56979622341" class="contact-btn">
+                        <span class="contact-icon">📱</span>
+                        +56 9 7962 2341
+                    </a>
+                    <div class="location">
+                        <span class="contact-icon">📍</span>
+                        Viña del Mar, Santiago, Chile
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    /* Services Section */
+    .services {
+        background: #1a1a2e;
+        padding: 6rem 0;
+        position: relative;
+    }
+
+    .services::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .services-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .services-header h2 {
+        font-size: 4rem;
+        font-weight: 800;
+        color: white;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+    }
+
+    .highlight {
+        background: linear-gradient(135deg, #a855f7, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .service-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .service-card p {
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-link {
+        color: #a855f7;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .service-link:hover {
+        color: #3b82f6;
+    }
+
+    /* Experience Section */
+    .experience {
+        background: #f8fafc;
+        padding: 6rem 0;
+    }
+
+    .experience-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .experience-left h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin-bottom: 3rem;
+        line-height: 1.1;
+    }
+
+    /* Job Timeline */
+    .job-timeline {
+        position: relative;
+    }
+
+    .job-timeline::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(135deg, #a855f7, #3b82f6);
+    }
+
+    .job-item {
+        position: relative;
+        padding-left: 60px;
+        margin-bottom: 3rem;
+    }
+
+    .job-item::before {
+        content: '';
+        position: absolute;
+        left: 14px;
+        top: 8px;
+        width: 12px;
+        height: 12px;
+        background: #a855f7;
+        border-radius: 50%;
+        border: 3px solid #f8fafc;
+    }
+
+    .job-item.current::before {
+        background: linear-gradient(135deg, #a855f7, #3b82f6);
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    }
+
+    .job-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #a855f7, #3b82f6);
+        color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .job-content h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 0.5rem;
+    }
+
+    .company {
+        color: #a855f7;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+
+    .period {
+        color: #64748b;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        color: #475569;
+        line-height: 1.6;
+    }
+
+    /* Skills Section */
+    .skills-section {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+    }
+
+    .skills-section h3,
+    .education-section h3,
+    .languages-section h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-category {
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-category h4 {
+        color: #64748b;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tech-tag {
+        padding: 0.5rem 1rem;
+        background: #e2e8f0;
+        border-radius: 25px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #475569;
+        transition: all 0.3s ease;
+    }
+
+    .tech-tag:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .tech-tag.ruby {
+        background: linear-gradient(135deg, #cc342d, #ff6b6b);
+        color: white;
+    }
+
+    .tech-tag.python {
+        background: linear-gradient(135deg, #f7ec8d, #7d88ec);
+        color: white;
+    }
+
+    .tech-tag.c {
+        background: linear-gradient(135deg, #cd8df7, #917dec);
+        color: white;
+    }
+
+	.tech-tag.java {
+		background: linear-gradient(135deg, #f89820, #f05023);
+		color: white;
+	}
+
+	.tech-tag.laravel {
+		background: linear-gradient(135deg, #ff2d20, #f05023);
+		color: white;
+	}
+
+	.tech-tag.js {
+		background: linear-gradient(135deg, #d8aa46, #d6cb65);
+		color: white;
+	}
+
+	.tech-tag.express {
+		background: linear-gradient(135deg, #7e5702, #e2bd6c);
+		color: white;
+	}
+
+	.tech-tag.htmlcss {
+		background: linear-gradient(135deg, #f06529, #2965f1);
+		color: white;
+	}
+
+	.tech-tag.next {
+		background: linear-gradient(135deg, #474747, #1d1d1d);
+		color: white;
+	}
+
+    .tech-tag.astro {
+        background: linear-gradient(135deg, #ff6b35, #f7931e);
+        color: white;
+    }
+
+    .tech-tag.sql {
+        background: linear-gradient(135deg, #336791, #4285f4);
+        color: white;
+    }
+
+    /* Education Section */
+    .education-section {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+    }
+
+    .education-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .education-item h4 {
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 0.3rem;
+    }
+
+    .education-item p {
+        color: #64748b;
+        font-size: 0.9rem;
+    }
+
+    /* Languages Section */
+    .languages-section {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .language-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .language-name {
+        min-width: 70px;
+        font-weight: 600;
+        color: #1e293b;
+        font-size: 0.9rem;
+    }
+
+    .language-bar {
+        flex: 1;
+        height: 8px;
+        background: #e2e8f0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .language-fill {
+        height: 100%;
+        border-radius: 10px;
+        transition: width 0.3s ease;
+    }
+
+    .language-fill.native {
+        width: 100%;
+        background: linear-gradient(135deg, #a855f7, #3b82f6);
+    }
+
+    .language-fill.intermediate {
+        width: 70%;
+        background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+	.language-fill.medianamente {
+        width: 50%;
+        background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .language-level {
+        min-width: 80px;
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    /* Contact CTA */
+    .contact-cta {
+        text-align: center;
+        background: linear-gradient(135deg, #1e293b, #334155);
+        padding: 4rem;
+        border-radius: 30px;
+        color: white;
+    }
+
+    .contact-cta h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    .contact-cta p {
+        font-size: 1.1rem;
+        opacity: 0.8;
+        margin-bottom: 3rem;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .contact-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1rem 2rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+    }
+
+    .contact-icon {
+        font-size: 1.2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .services-header h2 {
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .experience-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .experience-left h2 {
+            font-size: 2.3rem;
+        }
+
+        .contact-cta {
+            padding: 2rem;
+        }
+
+        .contact-cta h2 {
+            font-size: 2rem;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tech-tags {
+            justify-content: center;
+        }
+    }
+</style>
