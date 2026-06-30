@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Personal from '../components/Personal.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout>
@@ -48,7 +49,7 @@ import Personal from '../components/Personal.astro';
                                 <h3>Integration Analyst Jr.</h3>
                                 <p class="company">Buk • Santiago, Chile</p>
                                 <p class="period">Dic 2024 - Presente</p>
-                                <p class="description">Desarrollo de soluciones Ruby on Rails para archivos contables y vouchers personalizados. Migración de datos históricos y gestión de bases de datos externas con intenciones de integrarse a Buk.</p>
+                                <p class="description">Desarrollo de integraciones en Ruby on Rails para archivos contables, vouchers personalizados y migración de bases de datos externas hacia Buk. Carga histórica de datos desde archivos <code>.bak</code> con reconciliación de fichas de empleados e ítems mediante software interno en C#. Gestión activa de tickets con contacto directo a clientes internos, entregando soluciones ágiles con ciclos de feedback cortos. Uso de flujos de trabajo aumentados con IA (Claude) para creación, supervisión y compounding de skills y commands, mejorando iterativamente la calidad y velocidad de las soluciones.</p>
                             </div>
                         </div>
                         
@@ -76,6 +77,7 @@ import Personal from '../components/Personal.astro';
                                     <span class="tech-tag java">Java</span>
                                     <span class="tech-tag laravel">Laravel</span>
 									<span class="tech-tag express">Express.js</span>
+                                    <span class="tech-tag spring">Spring Boot</span>
                                 </div>
                             </div>
                             
@@ -90,11 +92,28 @@ import Personal from '../components/Personal.astro';
                             </div>
                             
                             <div class="tech-category">
-                                <h4>Bases de Datos</h4>
+                                <h4>Bases de Datos & Otros</h4>
                                 <div class="tech-tags">
                                     <span class="tech-tag sql">SQL</span>
                                     <span class="tech-tag">Git</span>
                                     <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag lua">Lua</span>
+                                    <span class="tech-tag vue">Vue 3</span>
+                                    <span class="tech-tag docker">Docker</span>
+                                    <span class="tech-tag aws">AWS</span>
+                                </div>
+                            </div>
+
+                            <div class="tech-category">
+                                <h4>IA & Automatización</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag claude">Claude</span>
+                                    <span class="tech-tag claudecode">Claude Code</span>
+                                    <span class="tech-tag aitools">Skills</span>
+                                    <span class="tech-tag aitools">Commands</span>
+                                    <span class="tech-tag aitools">Agents</span>
+                                    <span class="tech-tag aitools">MCP</span>
+                                    <span class="tech-tag aitools">Hooks</span>
                                 </div>
                             </div>
                         </div>
@@ -141,26 +160,31 @@ import Personal from '../components/Personal.astro';
                 </div>
             </div>
             
-            <div class="contact-cta">
-                <h2>¿Listo para trabajar juntos?</h2>
-                <p>Siempre estoy abierto a nuevas oportunidades y proyectos interesantes</p>
-                <div class="contact-info">
-                    <a href="mailto:amaroeduard@gmail.com" class="contact-btn">
-                        <span class="contact-icon">📧</span>
-                        amaroeduard@gmail.com
-                    </a>
-                    <a href="tel:+56979622341" class="contact-btn">
-                        <span class="contact-icon">📱</span>
-                        +56 9 7962 2341
-                    </a>
-                    <div class="location">
-                        <span class="contact-icon">📍</span>
-                        Viña del Mar, Chile
-                    </div>
+        </div>
+    </section>
+
+    <Projects />
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <h2>¿Listo para trabajar juntos?</h2>
+            <p>Siempre estoy abierto a nuevas oportunidades y proyectos interesantes</p>
+            <div class="footer-contact">
+                <a href="mailto:amaroeduard@gmail.com" class="footer-btn">
+                    <span>📧</span>
+                    amaroeduard@gmail.com
+                </a>
+                <a href="tel:+56979622341" class="footer-btn">
+                    <span>📱</span>
+                    +56 9 7962 2341
+                </a>
+                <div class="footer-location">
+                    <span>📍</span>
+                    Viña del Mar, Chile
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 </Layout>
 
 <style>
@@ -270,7 +294,7 @@ import Personal from '../components/Personal.astro';
 
     /* Experience Section */
     .experience {
-        background: #f8fafc;
+        background: #0d1117;
         padding: 6rem 0;
     }
 
@@ -284,7 +308,7 @@ import Personal from '../components/Personal.astro';
     .experience-left h2 {
         font-size: 3rem;
         font-weight: 800;
-        color: #1e293b;
+        color: white;
         margin-bottom: 3rem;
         line-height: 1.1;
     }
@@ -301,7 +325,7 @@ import Personal from '../components/Personal.astro';
         top: 0;
         bottom: 0;
         width: 2px;
-        background: linear-gradient(135deg, #a855f7, #3b82f6);
+        background: linear-gradient(180deg, #a855f7, #3b82f6);
     }
 
     .job-item {
@@ -319,12 +343,12 @@ import Personal from '../components/Personal.astro';
         height: 12px;
         background: #a855f7;
         border-radius: 50%;
-        border: 3px solid #f8fafc;
+        border: 3px solid #0d1117;
     }
 
     .job-item.current::before {
         background: linear-gradient(135deg, #a855f7, #3b82f6);
-        box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        box-shadow: 0 0 16px rgba(168, 85, 247, 0.6);
     }
 
     .job-badge {
@@ -341,42 +365,52 @@ import Personal from '../components/Personal.astro';
     .job-content h3 {
         font-size: 1.3rem;
         font-weight: 700;
-        color: #1e293b;
+        color: white;
         margin-bottom: 0.5rem;
     }
 
     .company {
-        color: #a855f7;
+        color: #a78bfa;
         font-weight: 600;
         margin-bottom: 0.3rem;
     }
 
     .period {
-        color: #64748b;
+        color: rgba(255, 255, 255, 0.4);
         font-size: 0.9rem;
         margin-bottom: 1rem;
     }
 
     .description {
-        color: #475569;
-        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.7;
+    }
+
+    .description code {
+        font-family: 'Courier New', monospace;
+        font-size: 0.85em;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 4px;
+        padding: 0.1em 0.4em;
+        color: rgba(255, 255, 255, 0.8);
     }
 
     /* Skills Section */
     .skills-section {
-        background: white;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         padding: 2rem;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .skills-section h3,
     .education-section h3,
     .languages-section h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 700;
-        color: #1e293b;
+        color: white;
         margin-bottom: 1.5rem;
     }
 
@@ -385,12 +419,12 @@ import Personal from '../components/Personal.astro';
     }
 
     .tech-category h4 {
-        color: #64748b;
-        font-size: 0.9rem;
-        font-weight: 600;
+        color: rgba(255, 255, 255, 0.35);
+        font-size: 0.75rem;
+        font-weight: 700;
         margin-bottom: 0.8rem;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        letter-spacing: 1px;
     }
 
     .tech-tags {
@@ -400,82 +434,47 @@ import Personal from '../components/Personal.astro';
     }
 
     .tech-tag {
-        padding: 0.5rem 1rem;
-        background: #e2e8f0;
+        padding: 0.4rem 1rem;
+        background: rgba(255, 255, 255, 0.07);
         border-radius: 25px;
         font-size: 0.8rem;
         font-weight: 600;
-        color: #475569;
+        color: rgba(255, 255, 255, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s ease;
     }
 
     .tech-tag:hover {
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .tech-tag.ruby {
-        background: linear-gradient(135deg, #cc342d, #ff6b6b);
-        color: white;
-    }
-
-    .tech-tag.python {
-        background: linear-gradient(135deg, #f7ec8d, #7d88ec);
-        color: white;
-    }
-
-    .tech-tag.c {
-        background: linear-gradient(135deg, #cd8df7, #917dec);
-        color: white;
-    }
-
-	.tech-tag.java {
-		background: linear-gradient(135deg, #f89820, #f05023);
-		color: white;
-	}
-
-	.tech-tag.laravel {
-		background: linear-gradient(135deg, #ff2d20, #f05023);
-		color: white;
-	}
-
-	.tech-tag.js {
-		background: linear-gradient(135deg, #d8aa46, #d6cb65);
-		color: white;
-	}
-
-	.tech-tag.express {
-		background: linear-gradient(135deg, #7e5702, #e2bd6c);
-		color: white;
-	}
-
-	.tech-tag.htmlcss {
-		background: linear-gradient(135deg, #f06529, #2965f1);
-		color: white;
-	}
-
-	.tech-tag.next {
-		background: linear-gradient(135deg, #474747, #1d1d1d);
-		color: white;
-	}
-
-    .tech-tag.astro {
-        background: linear-gradient(135deg, #ff6b35, #f7931e);
-        color: white;
-    }
-
-    .tech-tag.sql {
-        background: linear-gradient(135deg, #336791, #4285f4);
-        color: white;
-    }
+    .tech-tag.ruby    { background: linear-gradient(135deg, #7f1d1d, #ef4444); color: white; border: none; }
+    .tech-tag.python  { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; border: none; }
+    .tech-tag.c       { background: linear-gradient(135deg, #4c1d95, #8b5cf6); color: white; border: none; }
+    .tech-tag.java    { background: linear-gradient(135deg, #7c2d12, #f97316); color: white; border: none; }
+    .tech-tag.laravel { background: linear-gradient(135deg, #881337, #fb7185); color: white; border: none; }
+    .tech-tag.express { background: linear-gradient(135deg, #1f2937, #6b7280); color: white; border: none; }
+    .tech-tag.js      { background: linear-gradient(135deg, #713f12, #f59e0b); color: white; border: none; }
+    .tech-tag.htmlcss { background: linear-gradient(135deg, #7c2d12, #1d4ed8); color: white; border: none; }
+    .tech-tag.next    { background: linear-gradient(135deg, #111827, #374151); color: white; border: 1px solid rgba(255,255,255,0.15); }
+    .tech-tag.astro   { background: linear-gradient(135deg, #312e81, #c026d3); color: white; border: none; }
+    .tech-tag.sql     { background: linear-gradient(135deg, #1e40af, #38bdf8); color: white; border: none; }
+    .tech-tag.lua     { background: linear-gradient(135deg, #1e1b4b, #6366f1); color: white; border: none; }
+    .tech-tag.vue     { background: linear-gradient(135deg, #064e3b, #34d399); color: white; border: none; }
+    .tech-tag.spring  { background: linear-gradient(135deg, #14532d, #6db33f); color: white; border: none; }
+    .tech-tag.docker  { background: linear-gradient(135deg, #0c4a6e, #2496ed); color: white; border: none; }
+    .tech-tag.aws     { background: linear-gradient(135deg, #7c2d12, #ff9900); color: white; border: none; }
+    .tech-tag.claude      { background: linear-gradient(135deg, #2d1a0e, #d97757); color: white; border: none; }
+    .tech-tag.claudecode  { background: linear-gradient(135deg, #1a0d05, #e8845a); color: white; border: 1px solid rgba(217,119,87,0.4); }
+    .tech-tag.aitools     { background: rgba(217, 119, 87, 0.1); color: #e8a987; border: 1px solid rgba(217,119,87,0.25); }
 
     /* Education Section */
     .education-section {
-        background: white;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         padding: 2rem;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .education-item {
@@ -484,21 +483,21 @@ import Personal from '../components/Personal.astro';
 
     .education-item h4 {
         font-weight: 600;
-        color: #1e293b;
+        color: white;
         margin-bottom: 0.3rem;
     }
 
     .education-item p {
-        color: #64748b;
+        color: rgba(255, 255, 255, 0.4);
         font-size: 0.9rem;
     }
 
     /* Languages Section */
     .languages-section {
-        background: white;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         padding: 2rem;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .language-item {
@@ -511,14 +510,14 @@ import Personal from '../components/Personal.astro';
     .language-name {
         min-width: 70px;
         font-weight: 600;
-        color: #1e293b;
+        color: white;
         font-size: 0.9rem;
     }
 
     .language-bar {
         flex: 1;
-        height: 8px;
-        background: #e2e8f0;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.08);
         border-radius: 10px;
         overflow: hidden;
     }
@@ -526,90 +525,91 @@ import Personal from '../components/Personal.astro';
     .language-fill {
         height: 100%;
         border-radius: 10px;
-        transition: width 0.3s ease;
     }
 
     .language-fill.native {
         width: 100%;
-        background: linear-gradient(135deg, #a855f7, #3b82f6);
+        background: linear-gradient(90deg, #a855f7, #3b82f6);
     }
 
     .language-fill.intermediate {
         width: 70%;
-        background: linear-gradient(135deg, #10b981, #059669);
+        background: linear-gradient(90deg, #10b981, #34d399);
     }
 
-	.language-fill.medianamente {
+    .language-fill.medianamente {
         width: 50%;
-        background: linear-gradient(135deg, #10b981, #059669);
+        background: linear-gradient(90deg, #10b981, #34d399);
     }
 
     .language-level {
         min-width: 80px;
         font-size: 0.8rem;
-        color: #64748b;
+        color: rgba(255, 255, 255, 0.4);
     }
 
-    /* Contact CTA */
-    .contact-cta {
+    /* Footer */
+    .site-footer {
+        background: #070b10;
+        padding: 5rem 0 3rem;
         text-align: center;
-        background: linear-gradient(135deg, #1e293b, #334155);
-        padding: 4rem;
-        border-radius: 30px;
-        color: white;
     }
 
-    .contact-cta h2 {
+    .footer-inner {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .site-footer h2 {
         font-size: 2.5rem;
         font-weight: 800;
+        color: white;
         margin-bottom: 1rem;
     }
 
-    .contact-cta p {
-        font-size: 1.1rem;
-        opacity: 0.8;
+    .site-footer p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.45);
         margin-bottom: 3rem;
     }
 
-    .contact-info {
+    .footer-contact {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.5rem;
         flex-wrap: wrap;
     }
 
-    .contact-btn {
+    .footer-btn {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
-        padding: 1rem 2rem;
-        background: rgba(255, 255, 255, 0.1);
+        gap: 0.7rem;
+        padding: 0.85rem 1.8rem;
+        background: rgba(255, 255, 255, 0.06);
         border-radius: 50px;
         color: white;
         text-decoration: none;
         font-weight: 600;
+        font-size: 0.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .contact-btn:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    .footer-btn:hover {
+        background: rgba(168, 85, 247, 0.15);
+        border-color: rgba(168, 85, 247, 0.4);
+        transform: translateY(-2px);
     }
 
-    .location {
+    .footer-location {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
-        padding: 1rem 2rem;
-        color: rgba(255, 255, 255, 0.8);
+        gap: 0.7rem;
+        padding: 0.85rem 1.8rem;
+        color: rgba(255, 255, 255, 0.4);
         font-weight: 600;
-    }
-
-    .contact-icon {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     /* Responsive */
@@ -631,17 +631,13 @@ import Personal from '../components/Personal.astro';
             font-size: 2.3rem;
         }
 
-        .contact-cta {
-            padding: 2rem;
-        }
-
-        .contact-cta h2 {
-            font-size: 2rem;
-        }
-
-        .contact-info {
+        .footer-contact {
             flex-direction: column;
             align-items: center;
+        }
+
+        .site-footer h2 {
+            font-size: 2rem;
         }
 
         .tech-tags {
